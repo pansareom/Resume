@@ -1,0 +1,897 @@
+*{
+    /* Styling for all document */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+:root{
+    --color-primary: cyan;
+    --color-black: #000000;
+    --color-white:#fff;
+    --color-grey:#1a1a1a;
+    --color-lightgrey:#3b3939;
+
+    --container-width-lg: 80%; /*Container width LARGE for large device screen*/
+    --container-width-md: 90%; /*Container width MEDIUM for medium device screen*/
+    --container-width-sm: 94%; /*Container width SMALL for small device screen*/
+
+    --transition: all 400ms ease;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--color-black);
+}
+
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+section h2{
+    text-align: center;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Line height for every heading */
+h1, h2, h3, h4, h5{
+    line-height: 1.2;
+}
+
+/* Fontsize for every heading */
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+
+a{
+    color: var(--color-white);
+}
+
+p{
+    letter-spacing: 0.5px;
+}
+/* Styling for every image  */
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn{
+    /* ******** Styling For Every Button ******** */
+    display: inline-block;
+    background: transparent;
+    padding: 0.2rem 1.5rem;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    font-weight: 500;
+    border-radius: 3rem;
+    letter-spacing: 0.3rem;
+    transition: var(--transition);
+}
+
+/********** Fontsize for every heading **********/
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* ================================================= Misillinious Objectives End ======================================== */
+/* ==================================================== Navbar Styling Start ============================================ */
+nav{
+    background: var(--color-black);
+    width: 100vw; /* (VIEWPORT WIDTH) No mater what device the navbar will take entire width */
+    height: 3rem;
+    position: fixed; /* (POSITION FIXED) even we scroll the navbar will be fixed on top */
+    top: 0;
+    z-index: 11; /* The navbar will on top of everything */
+}
+
+.nav-container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button{
+    display: none;
+
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-menu  a{
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+/* ============ Navbar Hover Effect Start============ */
+.nav-menu a:hover{
+    color: var(--color-primary);
+}
+/* ============ Navbar Hover Effect End ============ */
+/* ======================================== NAVBAR END====================================== */
+/* ======================================== HEADER START====================================== */
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* this will divide the grid in 50%-50% of the screen */
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.header-left p{
+    margin: 1rem 0 2.4rem;
+}
+
+.header-left a{
+    margin: 0.8rem;
+}
+.header-left span{
+    color: var(--color-primary);
+}
+
+.contact-btn{
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+/* ============ Header Hover Effect Start ============ */
+.header-left a:hover{
+    box-shadow: 0 0 15px var(--color-primary);
+}
+/* ============ Header Hover Effect End ============ */
+/* ======================================== CATEGORIES SECTION START====================================== */
+.categories{
+    background: var(--color-grey);
+    height: 32rem;
+}
+
+.categories-left a{
+    background: var(--color-black);
+}
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.categories-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding-top: 5rem;
+}
+
+.categories-left p{
+    margin: 1rem 0 3rem;
+}
+
+.categories-right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+}
+
+.categories-left{
+    margin-right: 4rem;
+}
+
+.category{
+    background: var(--color-black);
+    border: 1px solid var(--color-primary);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+
+.category-icon{
+    background: var(--color-primary);
+    padding: 0.7rem;
+    padding-top: 1rem;
+    border-radius: 0.9rem;
+}
+
+.category-icon i{
+    font-size: 1.5rem;
+    color: var(--color-black);
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+
+.category p{
+    font-size: 0.85rem;
+}
+/* ============ Categories Hover Effect Start ============ */
+.categories .btn:hover{
+    color: var(--color-black);
+    font-weight: 700;
+    box-shadow: 0 0 15px var(--color-primary);
+    background: var(--color-primary);
+}
+.category:hover{
+    box-shadow: 0 1rem 3rem rgba(0, 255, 255, 0.3);
+    z-index: 1;
+}
+
+/* ============ Categories Hover Effect End ============ */
+/* ======================================== CATEGORIES SECTION END====================================== */
+/* ======================================== RESUME SECTION START====================================== */
+.resume{
+    margin-top: 10rem;
+}
+.resume h2{
+    position: relative;
+    top: 2rem;
+}
+/* ===================Resume Section Start ====================== */
+.resume-container h4{
+    margin: 3rem 0 3rem;
+    text-decoration: underline var(--color-primary);
+}
+
+.software-skills p{
+    margin-top: 1rem;
+}
+
+.progress-bar{
+    background: var(--color-lightgrey);
+    width: 23rem;
+    height: 0.4rem;
+    border-radius: 3rem;
+}
+
+.progress-bar div{
+    background: var(--color-primary);
+    height: 100%;
+    border-radius: 3rem;
+}
+
+.progress-bar div span{
+    background: var(--color-black);
+    border: 0.1px solid var(--color-white);
+    font-size: 0.6rem;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    float: right;
+    margin-top: -0.5rem;
+    margin-right: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.html{
+    width: 85%;
+}
+.css{
+    width: 80%;
+}
+.javascript{
+    width: 75%;
+}
+.nodejs{
+    width: 65%;
+}
+.reactjs{
+    width: 70%;
+}
+/* ====== EDUCATION section Start ======== */
+.text h5{
+    font-size: 1rem;
+}
+.text-box{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.year{
+    border: 2px solid var(--color-primary);
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -0.2rem;
+}
+
+.text{
+    margin-left: 1rem;
+}
+/* ====== EDUCATION section End ======== */
+/* Languages Section start */
+.languages p{
+    margin-top: 1rem;
+}
+.english{
+    width: 80%;
+}
+.hindi{
+    width: 70%;
+}
+.marathi{
+    width: 85%;
+}
+
+.interest{
+    display: flex;
+    flex-direction: row;
+}
+.interest div{
+    margin: 0 1rem 1rem 0;
+}
+.circle{
+    font-size: 2rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.resume-container{
+    /* background-color: rgb(105, 56, 56); */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+/* ======================================== RESUME SECTION END ====================================== */
+/* ======================================== Portfolio SECTION START ====================================== */
+
+.portfolio{
+    background: var(--color-black);
+}
+.portfolio h2{
+    margin-top: 2rem;
+    padding-top: 3rem;
+}
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.portfolio-project{
+    background: var(--color-grey);
+    padding: 1rem;
+    border:1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.portfolio-project-img img{
+    filter: saturate(0);
+    border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.portfolio-project-info {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.portfolio-project-info p{
+    color: var(--color-white);
+    padding: 0.2rem 0 1rem 0;
+}
+
+.portfolio-project-socials{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 255, 255, 0.18);
+    transition: var(--transition);
+}
+
+.portfolio-project-socials a{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+/* Portfolio Hover Effect Start*/
+.portfolio-project:hover{
+    background: transparent;
+    border:1px solid var(--color-primary);
+}
+
+.portfolio-project:hover img{
+    filter: saturate(1);
+    transition: var(--transition);
+}
+
+.portfolio-project:hover .portfolio-project-socials{
+    right: 0;
+}
+
+.portfolio-project-info a:hover{
+    color: var(--color-black);
+    font-weight: 700;
+    box-shadow: 0 0 15px var(--color-primary);
+    background: var(--color-primary);
+}
+
+.portfolio-project-socials a:hover{
+    color: var(--color-black);
+}
+/* Portfolio Hover Effect End*/
+/* ======================================== Portfolio SECTION END ====================================== */
+/* ======================================== Contact SECTION START ====================================== */
+
+.contact h2{
+    margin-top: 4rem;
+}
+.contact-container{
+    background: var(--color-lightgrey);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto ;
+    border-radius: 1rem;
+}
+/* ====== Aside Section Styling Start======= */
+.contact-aside{
+    background: var(--color-grey);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
+}
+
+.aside-image{
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact-aside h2{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-aside p{
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact-details li{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-social{
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.contact-social a{
+    color: var(--color-white);
+    background: var(--color-black);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.contact-social a:hover{
+    color: var(--color-black);
+    font-weight: 700;
+    background: var(--color-primary);
+    box-shadow: 0 0 15px var(--color-primary);
+}
+/* ====== Aside Section Styling End======= */
+/* ====== Form Section Styling Start======= */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form-name{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.contact-form input[type="text"]{
+    width: 50%;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.contact-form .btn{
+    width: max-content;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    font-weight: 700;
+}
+.contact-form button:hover{
+    box-shadow: 0 0 15px var(--color-primary);
+}
+footer{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 7.5rem;
+}
+
+footer span{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+/* ======================================== Contact SECTION END ====================================== */
+/* ================================================ 1024px Media queries(Tablets) Start ========================================*/
+@media screen and (max-width: 1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+
+    /* ====== Navbar media Queries ======*/
+    nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.5rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+    nav button#close-menu-btn{
+        display: none;
+    }
+    .nav-menu{
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.285), rgba(255,255,255,0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0.5rem;
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 15rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    /* ======= Header =======*/
+    header{
+        height: 52vh;
+        margin-bottom: 4rem;
+    }
+    .header-container{
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+    .header-left a{
+        margin: 0.6rem;
+    }
+    /* ======= Categories ======= */
+    .categories{
+        height: auto;
+    }
+    .categories-container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .categories-left{
+        margin-right: 0;
+    }
+    .resume{
+        margin-top: 3rem;
+    }
+    .resume-container h4{
+        margin: 3rem 0 2rem;
+    }
+    .software-skills p{
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .progress-bar{
+        width: 19rem;
+        height: 0.3rem;
+        border-radius: 3rem;
+    }
+    .progress-bar div span{
+        font-size: 0.5rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+    /* ====== EDUCATION section Start ======== */
+.text h5{
+    font-size: 0.9rem;
+}
+.text-box{
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.year{
+    height: 4rem;
+    width: 4rem;
+    line-height: 1rem;
+}
+
+.text{
+    margin-left: 1rem;
+}
+
+/* ====== EDUCATION section End ======== */
+/* ====== WICD section Start ======== */
+.wicd {
+    font-size: 0.9rem;
+}
+/* ====== WICD section End ======== */
+/* ====== Design section Start ======== */
+.design{
+    font-size: 0.9rem;
+}
+/* ====== Design section End ======== */
+.interest{
+    display: flex;
+    flex-direction: row;
+}
+.interest div{
+    margin: 0 1rem 1rem 0;
+}
+.circle{
+    font-size: 2rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.resume-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.resume-right{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    gap: 2rem; 
+}
+.portfolio-container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.portfolio-project{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+/* Contact */
+.contact{
+    padding-bottom: 0;
+}
+
+.contact-container{
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+}
+
+.contact-aside{
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+}
+
+.contact-form{
+    align-self: center;
+    margin-right: 1.5rem;
+}
+footer{
+    top: -4rem;
+}
+}
+/* ================================================ 1024px Media queries(Tablets) End ========================================*/
+/* ================================================ 600px Media queries(Tablets) Start ========================================*/
+@media  screen and (max-width: 600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    .nav-menu{
+        right: 2%;
+    }
+    /* ======= Header ======= */
+    header{
+        height: 100vh;
+    }
+    .header-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+    .header-left p{
+        margin-bottom: 1.3rem;
+    }
+    .header-left a{
+        margin: 0.4rem;
+    }
+    /* ======= Categories ======= */
+    .categories-right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .category{
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    .resume{
+        margin-top: 2rem;
+    }
+
+    .resume h4{
+        margin: 2rem 0 1rem;
+    }
+    .progress-bar{
+        width: 100%;
+    }
+    /* ====== EDUCATION section End ======== */
+    .text-box{
+        display: flex;
+        align-items: center;
+    }
+    .year{
+        font-size: 0.6rem;
+        line-height: 0.6rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 2px;
+        line-height: 0.8rem;
+    }
+    .text{
+        margin-left: 1rem;
+    }
+    /* ====== EDUCATION section End ======== */
+    .resume-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+    }
+    .resume-middle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .resume-right{
+        display: flex;
+        flex-direction: column;
+    }
+    .resume-right h4{
+        margin-top: 1rem;
+    }
+    .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 0.7rem;
+    }
+
+    .portfolio-project{
+        padding: 0;
+    }
+    .portfolio-project img{
+        border-radius: 1px;
+        overflow: hidden;
+    }
+
+    .portfolio-project p{
+        margin-bottom: 0.3rem;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .portfolio-project-info a{
+        padding: 0.2rem;
+        margin-bottom: 0.3rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.2rem;
+    }
+    /* Contact */
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .contact-form{
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form-name{
+        flex-direction: column;
+    }
+
+    .form-name input[type="text"]{
+        width: 100%;
+    }
+    footer{
+        font-size: 0.8rem;
+        top: -1rem;
+    }
+}
+/* ================================================ 600px Media queries(Tablets) End ========================================*/
