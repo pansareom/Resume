@@ -865,10 +865,14 @@ footer{
     }
 
     .portfolio-project-info a{
-        padding: 0.2rem;
+        padding: 0.2rem 0.4rem;
         margin-bottom: 0.3rem;
         font-size: 0.8rem;
         letter-spacing: 0.2rem;
+        background: var(--color-black);
+        color: var(--color-primary);
+        font-size: 0.7rem;
+        border: 2px solid var(--color-primary);
     }
     /* Contact */
     .contact-container{
